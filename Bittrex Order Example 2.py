@@ -60,7 +60,7 @@ while True:
         try:
             data = requests.post(uri, 
                                  data=payload, 
-                                 headers = auth(uri, 'POST', content, apiKey, apiSecret),
+                                 headers = auth(uri, 'POST', payload, apiKey, apiSecret),
                                  timeout=10
                                 ).json()
             print(data)
